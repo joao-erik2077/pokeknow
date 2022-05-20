@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { PokeFooterComponent } from '../poke-footer/poke-footer.component';
 
 @NgModule({
   imports: [
@@ -14,6 +14,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  entryComponents: [PokeFooterComponent],
+  declarations: [HomePage, PokeFooterComponent],
 })
 export class HomePageModule {}
