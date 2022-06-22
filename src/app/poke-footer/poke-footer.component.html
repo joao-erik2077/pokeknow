@@ -1,19 +1,13 @@
 <ion-footer>
-  <ion-fab horizontal="start">
-    <ion-fab-button color="danger">
-      <ion-icon name="arrow-back"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-  <ion-fab horizontal="center">
-    <ion-fab-button color="danger">
+  <ion-fab horizontal="end">
+    <ion-fab-button close-icon="assets/icon/masterball.svg" class="center-ion-fab">
       <img style="width: 95px" src="assets/icon/pokemon.svg">
     </ion-fab-button>
-  </ion-fab>
 
-  <ion-fab horizontal="end">
-    <ion-fab-button color="danger">
-      <ion-icon name="shuffle"></ion-icon>
-    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="purple"><ion-icon name="star" color="light"></ion-icon></ion-fab-button>
+      <ion-fab-button color="purple"><ion-icon name="search" color="light"></ion-icon></ion-fab-button>
+      <ion-fab-button color="purple"><ion-icon name="shuffle" color="light"></ion-icon></ion-fab-button>
+    </ion-fab-list>
   </ion-fab>
 </ion-footer>
