@@ -1,3 +1,29 @@
 ion-title {
   font-weight: bold;
 }
+
+ion-item {
+  --background: #ee818f;
+  border-radius: 2rem;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  --inner-padding-end: 0;
+
+  ion-thumbnail {
+    height: 100%;
+    width: 130px;
+
+    background-color: #f8a7b2;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 90%;
+      width: 120px;
+    }
+  }
+}
