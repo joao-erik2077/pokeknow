@@ -1,4 +1,6 @@
+import { PokemonDataService } from './../services/pokemon-data.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -46,7 +48,7 @@ export class HomePage {
     },
   ];
 
-  constructor() {}
+  constructor(public route: Router, public pokemonDataService: PokemonDataService) {}
 
   getColor(type: string): string {
     return `type-${type}`;
@@ -60,6 +62,11 @@ export class HomePage {
     } else {
       return `#00${id}`;
     }
+  }
+
+  pokeNavigate(data: any) {
+    this.pokemonDataService.setData(data);
+    this.route.navigateByUrl('pokemon');
   }
 
 }
