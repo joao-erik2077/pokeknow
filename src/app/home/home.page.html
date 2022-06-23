@@ -1,17 +1,22 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar>
     <ion-title>
       POKEKNOW
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="light">
   <ion-list>
 
     <ion-item lines="none" *ngFor="let pokemon of pokemons">
 
-      <h1>{{ pokemon.name }}</h1>
+      <div>
+        <h1>{{ pokemon.name }}</h1>
+        <ion-badge mode="ios" color="light">{{ formatId(pokemon.id) }}</ion-badge>
+        <ion-badge *ngFor="let type of pokemon.types" [color]="getColor(type)" mode="ios">{{ type }}</ion-badge>
+      </div>
+
 
       <ion-thumbnail slot="end" vertical="end">
         <img [src]="pokemon.sprite">
