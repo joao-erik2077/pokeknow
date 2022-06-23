@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true" color="light">
   <ion-list>
 
-    <ion-item lines="none" *ngFor="let pokemon of pokemons" (click)="pokeNavigate(pokemon)">
+    <ion-item lines="none" *ngFor="let pokemon of pokemons" (click)="pokeNavigate(pokemon)" [class]="pokemon.types[0]">
 
       <div>
         <h1>{{ pokemon.name }}</h1>

@@ -8,7 +8,6 @@ ion-toolbar {
 }
 
 ion-item {
-  --background: #ff7675;
   border-radius: 2rem;
   margin-right: 15px;
   margin-left: 15px;
@@ -22,7 +21,6 @@ ion-item {
     width: 130px;
     box-shadow: 0 0 7px #000000;
 
-    background-color: #300000;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 
@@ -46,4 +44,96 @@ h1 {
 ion-badge {
   margin-left: 5px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: 0 0 10px #000000;
 }
+
+.bug {
+  --background: #4C7C46;
+  ion-thumbnail {background-color: #7D8A46;}
+}
+
+.dark {
+  --background: #2d2f2d;
+  ion-thumbnail {background-color: #393B35;}
+}
+
+.dragon {
+  --background: #488a94;
+  ion-thumbnail {background-color: #47A17B;}
+}
+
+.electric {
+  --background: #e1e246;
+  ion-thumbnail {background-color: #F0CC3E;}
+}
+
+.fairy {
+  --background: #e51d67;
+  ion-thumbnail {background-color: #C613F2;}
+}
+
+.fighting {
+  --background: #ec633d;
+  ion-thumbnail {background-color: #F79734;}
+}
+
+.fire {
+  --background: #E8250C;
+  ion-thumbnail {background-color: #FF001A;}
+}
+
+.flying {
+  --background: #95b2c6;
+  ion-thumbnail {background-color: #94D4CB;}
+}
+
+.ghost {
+  --background: #8f688f;
+  ion-thumbnail {background-color: #806A9C;}
+}
+
+.grass {
+  --background: #1e7a41;
+  ion-thumbnail {background-color: #33871B;}
+}
+
+.ground {
+  --background: #6d4923;
+  ion-thumbnail {background-color: #7A3521;}
+}
+
+.ice {
+  --background: #d9f0f9;
+  ion-thumbnail {background-color: #CFFDF1;}
+}
+
+.normal {
+  --background: #c999a6;
+  ion-thumbnail {background-color: #CD98D6;}
+}
+
+.poison {
+  --background: #5d3086;
+  ion-thumbnail {background-color: #4C319E;}
+}
+
+.psychic {
+  --background: #f3278f;
+  ion-thumbnail {background-color: #DA18DB;}
+}
+
+.rock {
+  --background: #893e25;
+  ion-thumbnail {background-color: #962132;}
+}
+
+.stell {
+  --background: #61756e;
+  ion-thumbnail {background-color: #658268;}
+}
+
+.water {
+  --background: #87a9f8;
+  ion-thumbnail {background-color: #7BE5FC;}
+}
+
