@@ -1,54 +1,48 @@
 import { PokemonDataService } from './../services/pokemon-data.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PokeApiService } from '../services/poke-api.service';
+
+import { IonInfiniteScroll } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  loading = false;
+  public pokemons: any[] = [];
+  private totalPokemons = 905;
 
-  pokemons = [
-    {
-      name: 'Bulbassaur',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-      id: 1,
-      types: ['grass', 'poison'],
-    },
-    {
-      name: 'Ivyssaur',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png',
-      id: 2,
-      types: ['grass', 'poison'],
-    },
-    {
-      name: 'Venussaur',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
-      id: 3,
-      types: ['grass', 'poison'],
-    },
-    {
-      name: 'Charmander',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
-      id: 4,
-      types: ['fire'],
-    },
-    {
-      name: 'Charmeleon',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png',
-      id: 5,
-      types: ['fire'],
-    },
-    {
-      name: 'Charizard',
-      sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
-      id: 6,
-      types: ['fire', 'flying'],
-    },
-  ];
+  constructor(
+    private route: Router,
+    private pokemonDataService: PokemonDataService,
+    private pokeApiService: PokeApiService
+  ) {}
 
-  constructor(public route: Router, public pokemonDataService: PokemonDataService) {}
+  ngOnInit() {
+    this.getPokemons();
+  }
+
+  getPokemons() {
+    this.pokemons = this.pokeApiService.getPokemons();
+  }
+
+  loadData(event) {
+    // eslint-disable-next-line curly
+    if (this.loading) return;
+    if (!this.loading) {
+      this.loading = true;
+      this.getPokemons();
+      this.loading = false;
+    }
+    event.target.complete();
+
+    if (this.pokemons.length >= this.totalPokemons) {
+      event.target.disabled = true;
+    }
+  }
 
   getColor(type: string): string {
     return `type-${type}`;
@@ -68,5 +62,4 @@ export class HomePage {
     this.pokemonDataService.setData(data);
     this.route.navigateByUrl('pokemon');
   }
-
 }
