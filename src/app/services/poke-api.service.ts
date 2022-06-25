@@ -19,9 +19,9 @@ export class PokeApiService {
     return this.pokemons;
   }
 
-  apiGet(quantity: number) {
+  async apiGet(quantity: number) {
     for (let i = this.index; i < quantity; i++) {
-      this.http.get(`https://pokeapi.co/api/v2/pokemon/${i}`).subscribe((data: any) => this.pokemons[i-1] = data);
+      await this.http.get(`https://pokeapi.co/api/v2/pokemon/${i}`).toPromise().then((data: any) => this.pokemons[i-1] = data);
       this.index++;
     }
   }

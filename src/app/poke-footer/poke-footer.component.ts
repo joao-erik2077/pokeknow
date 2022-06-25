@@ -19,7 +19,6 @@ export class PokeFooterComponent {
 
   async getRandomPokemon() {
     const data = await this.pokeApiService.getRandomPokemon();
-    console.log(data);
     this.pokemonDataService.setData(data);
     this.route.navigateByUrl('pokemon');
   }
