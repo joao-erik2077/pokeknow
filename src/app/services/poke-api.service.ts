@@ -25,4 +25,17 @@ export class PokeApiService {
       this.index++;
     }
   }
+
+  getPokemon(id: number) {
+    let pokemon;
+    this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`).toPromise().then((data: any) => pokemon = data);
+    return pokemon;
+  }
+
+  async getRandomPokemon() {
+    const random = Math.round(Math.random() * this.totalPokemons);
+    let pokemon;
+    await this.http.get(`https://pokeapi.co/api/v2/pokemon/${random}`).toPromise().then((data: any) => pokemon = data);
+    return pokemon;
+  }
 }

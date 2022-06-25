@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PokeApiService } from '../services/poke-api.service';
 
-import { IonInfiniteScroll } from '@ionic/angular';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
