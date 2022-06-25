@@ -21,9 +21,8 @@ export class PokeApiService {
 
   apiGet(quantity: number) {
     for (let i = this.index; i < quantity; i++) {
-      console.log(i);
+      this.http.get(`https://pokeapi.co/api/v2/pokemon/${i}`).subscribe((data: any) => this.pokemons[i-1] = data);
       this.index++;
-      this.http.get(`https://pokeapi.co/api/v2/pokemon/${i}`).subscribe((data: any) => this.pokemons.push(data));
     }
   }
 }
