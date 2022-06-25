@@ -26,4 +26,12 @@ export class PokemonPage implements OnInit {
     }
   }
 
+  capitalize(x: string): string {
+    return x[0].toUpperCase() + x.substring(1);
+  }
+
+  getColor(type: string): string {
+    return `type-${type}`;
+  }
+
 }

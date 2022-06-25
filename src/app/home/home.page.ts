@@ -62,4 +62,8 @@ export class HomePage implements OnInit {
     this.pokemonDataService.setData(data);
     this.route.navigateByUrl('pokemon');
   }
+
+  capitalize(x: string): string {
+    return x[0].toUpperCase() + x.substring(1);
+  }
 }

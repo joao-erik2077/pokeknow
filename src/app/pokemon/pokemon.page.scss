@@ -6,3 +6,218 @@ ion-toolbar {
     font-weight: bold;
   }
 }
+
+ion-card {
+  box-shadow: 0 0 15px #000000;
+  border-radius: 5%;
+
+  img {
+    width: 90%;
+    box-shadow: 0 0 15px #000000;
+    margin: 15px;
+    border-radius: 5%;
+  }
+
+  div {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 0 0 15px #000000;
+      }
+    }
+  }
+}
+
+ion-badge {
+  margin-left: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 0 10px #000000;
+}
+
+.bug {
+  --background: #468a66;
+  ion-card {
+    --background: #4c7c46;
+  }
+  img {
+    background-color: #7d8a46;
+  }
+}
+
+.dark {
+  --background: #3e4540;
+  ion-card {
+    --background: #2d2f2d;
+  }
+  img {
+    background-color: #393b35;
+  }
+}
+
+.dragon {
+  --background: #4bab9d;
+  ion-card {
+    --background: #488a94;
+  }
+  img {
+    background-color: #47a17b;
+  }
+}
+
+.electric {
+  --background: #fae741;
+  ion-card {
+    --background: #e1e246;
+  }
+  img {
+    background-color: #f0cc3e;
+  }
+}
+
+.fairy {
+  --background: #fc14dd;
+  ion-card {
+    --background: #e51d67;
+  }
+  img {
+    background-color: #c613f2;
+  }
+}
+
+.fighting {
+  --background: #f79734;
+  ion-card {
+    --background: #ec633d;
+  }
+  img {
+    background-color: #f79734;
+  }
+}
+
+.fire {
+  --background: #f56400;
+  ion-card {
+    --background: #e8250c;
+  }
+  img {
+    background-color: #ff001a;
+  }
+}
+
+.flying {
+  --background: #9bb2de;
+  ion-card {
+    --background: #95b2c6;
+  }
+  img {
+    background-color: #94d4cb;
+  }
+}
+
+.ghost {
+  --background: #a6718b;
+  ion-card {
+    --background: #8f688f;
+  }
+  img {
+    background-color: #806a9c;
+  }
+}
+
+.grass {
+  --background: #1d916b;
+  ion-card {
+    --background: #1e7a41;
+  }
+  img {
+    background-color: #33871b;
+  }
+}
+
+.ground {
+  --background: #7a6321;
+  ion-card {
+    --background: #6d4923;
+  }
+  img {
+    background-color: #7a3521;
+  }
+}
+
+.ice {
+  --background: #cfd8fd;
+  ion-card {
+    --background: #d9f0f9;
+  }
+  img {
+    background-color: #cffdf1;
+  }
+}
+
+.normal {
+  --background: #d6a598;
+  ion-card {
+    --background: #c999a6;
+  }
+  img {
+    background-color: #cd98d6;
+  }
+}
+
+.poison {
+  --background: #942e88;
+  ion-card {
+    --background: #5d3086;
+  }
+  img {
+    background-color: #4c319e;
+  }
+}
+
+.psychic {
+  --background: #bb1bf9;
+  ion-card {
+    --background: #f3278f;
+  }
+  img {
+    background-color: #da18db;
+  }
+}
+
+.rock {
+  --background: #966121;
+  ion-card {
+    --background: #893e25;
+  }
+  img {
+    background-color: #962132;
+  }
+}
+
+.steel {
+  --background: #657c82;
+  ion-card {
+    --background: #61756e;
+  }
+  img {
+    background-color: #658268;
+  }
+}
+
+.water {
+  --background: #997bfc;
+  ion-card {
+    --background: #87a9f8;
+  }
+  img {
+    background-color: #7be5fc;
+  }
+}
