@@ -13,12 +13,14 @@
 
       <div>
         <h1>{{ capitalize(pokemon.name) }}</h1>
-        <ion-badge mode="ios" color="light">{{ formatId(pokemon.id) }}</ion-badge>
-        <ion-badge *ngFor="let type of pokemon.types" [color]="getColor(type.type.name)" mode="ios">{{ type.type.name }}</ion-badge>
+        <div class="badges">
+          <ion-badge mode="ios" color="light">{{ formatId(pokemon.id) }}</ion-badge>
+          <ion-badge *ngFor="let type of pokemon.types" [color]="getColor(type.type.name)" mode="ios">{{ capitalize(type.type.name) }}</ion-badge>
+        </div>
       </div>
 
 
-      <ion-thumbnail slot="end" vertical="end">
+      <ion-thumbnail slot="end">
         <img [src]="pokemon.sprites.front_default">
       </ion-thumbnail>
     </ion-item>
